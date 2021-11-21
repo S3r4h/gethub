@@ -1,32 +1,20 @@
 ﻿using System;
 
-namespace _1
+namespace ConsoleApp2
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int a, b, c, result1;
-            int result = 0;
-
-            Console.WriteLine("Введите нижний порог прогрессии: ");
-            a = Convert.ToInt32(Console.ReadLine());
-
-            Console.WriteLine("Введите верхний порог прогрессии: ");
-            b = Convert.ToInt32(Console.ReadLine());
-
-            Console.WriteLine("Введите шаг арифметической прогрессии: ");
-            c = Convert.ToInt32(Console.ReadLine());
-
-
-            for (int i = a; i <= b; i += c)
+            Console.WriteLine("n = ");
+            int n = Convert.ToInt32(Console.ReadLine());
+            int sum = 0;
+            for (int i = 1; i <= n; i++)
             {
-                result1 = i;
-                result += result1;
-                Console.WriteLine($"Сумма равна: {result}");
+                sum += i;
             }
-
-            Console.ReadLine();
+            Console.WriteLine("Сумма первых {0} членов арифметической прогрессии равна {1}", n, sum);
+            
         }
     }
 }
